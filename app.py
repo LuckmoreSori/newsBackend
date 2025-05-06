@@ -4,7 +4,7 @@ import pandas as pd
 import os
 
 app = Flask(__name__)
-CORS(app, origins=["https://news-article-system-lucky.vercel.app/"])  # Corrected origin (no trailing slash)
+CORS(app, origins=["https://news-article-system-lucky.vercel.app"])  # Corrected origin (no trailing slash)
 
 # Load your data
 data_path = os.path.join(os.path.dirname(__file__), 'article.csv')
