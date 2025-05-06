@@ -20,7 +20,7 @@ def get_articles():
         return jsonify({"error": "No articles found."}), 404
 
     try:
-        # Only select the necessary columns and drop NaNs to be safe
+        # Only select the necessary columns and drop NaNs to be safe the code is working
         required_columns = ['title','url', 'category', 'source','picture']
         articles = data[required_columns].fillna("").to_dict(orient='records')
         return jsonify(articles)
